@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <div class="s01">
+      <form action="/ReadText/textToAudio/" method="POST">
+        {% csrf_token %}
+        <fieldset>
+          <legend style="padding-left: 450px;margin-bottom: 450px;margin-top: -300px;">EchoForMe</legend>
+        </fieldset>
+        <div class="inner-form" style="padding-top: 50px;border-top-style: solid;border-top-width: 0px;margin-top: -150px;">
+          <div class="input-field first-wrap">
+            <input id="text_to_read" type="text" name="text_to_read" placeholder="Enter the text to read" />
+          </div>
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="submit">Just Read!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+{% endblock %}
