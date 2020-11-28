@@ -46,7 +46,6 @@ def textToAudio(request):
     myobj.save(filename) 
       
     # Playing the converted file
-    #  -------------------------ERROR POINT ---------------------------- 
     p = vlc.MediaPlayer(filename)
     p.play()
     print(request.POST)
@@ -57,13 +56,23 @@ def texttoAudioNews(request):
     opts=webdriver.ChromeOptions()
     opts.headless=True
     driver = webdriver.Chrome(ChromeDriverManager().install() ,options=opts)
-    headings=[] #List to store heading of the news
-    contents=[] #List to store content of the news
-    driver.get("https://timesofindia.indiatimes.com/videos/business/gdp-contracts-7-5-in-july-september-india-enters-recession/videoshow/79450419.cms")
+    # Page to access top News from TimesOfIndia
+    driver.get("https://timesofindia.indiatimes.com/videos/top-videos")
 
     content = driver.page_source
     soup = BeautifulSoup(content,features="html.parser")
 
+    # Finding the url for the latest news
+    for a in soup.findAll('div',attrs={'class':'_3sL7K'}):
+        url = a.find('a',href=True,attrs={'class':'_2tgB-'})
+
+    headings=[] #List to store heading of the news
+    contents=[] #List to store content of the news
+
+    # Using the find url for extracting news and heading 
+    driver.get(url["href"])
+    content = driver.page_source
+    soup = BeautifulSoup(content,features="html.parser")
     for a in soup.findAll('div',attrs={'class':'_2GHni'}):
         heading=a.find('h1')
         content=a.find('p',attrs={'class':'_159Jb'})
@@ -72,30 +81,40 @@ def texttoAudioNews(request):
     myobjContent = gTTS(text=content.text, lang=language, slow=False)
 
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
+
+    # Saving the converted audio in mp3 format
     filename1 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
     filename2 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
     myobjHeading.save(filename1)
     myobjContent.save(filename2)
 
+    # For calling out the Heading Tag and Content tag
     headingMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading.mp3"
     contentMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content.mp3"
 
     # Playing the converted file
     #  -------------------------ERROR POINT ---------------------------- 
-    # Playing the title Heading
+    # Playing the title " The Heading"
     p = vlc.MediaPlayer(headingMp3)
     p.play()
+
+    # Sleep for 2 sec
     time.sleep(2)
+
+    # Playing the Heading Material
     p = vlc.MediaPlayer(filename1)
     p.play()
 
-    # 10 sec time lag between heading and content 
+    # 8 sec time lag between heading and content 
     time.sleep(8)
+    # Playing the title "Content" 
     p = vlc.MediaPlayer(contentMp3)
     p.play()
+
+    # Sleep for 2 sec
     time.sleep(2)
-    # Playing News Content
-    g = vlc.MediaPlayer(filename2)
-    g.play()
+    # Playing The News Material
+    p = vlc.MediaPlayer(filename2)
+    p.play()
     
     return render(request, 'index.html')
