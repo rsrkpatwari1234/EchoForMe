@@ -29,7 +29,9 @@ $deactivate
 ```
 ## Setting up the project
 1.Create a 'django_projects' directory within the same directory as the virtual environment
+
 2.Initialise the directory for git and clone the repository
+
 3.You may require to perform the  migration steps
 ```
 $python3 manage.py makemigrations
