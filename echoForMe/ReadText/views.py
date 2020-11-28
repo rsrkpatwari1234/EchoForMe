@@ -20,7 +20,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Create your views here.
-# from catalog.models import Book, Author, BookInstance, Genre
 
 def index(request):
     """View function for home page of site."""
@@ -28,7 +27,11 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
 
-def textToAudio(request):
+def normaltext(request):
+    return render(request, 'readtext.html')
+
+def textToAudioNormalText(request):
+    print("---------------------------Processing text-----------------------------------")
     # Language in which you want to convert 
     language = 'en'
     # Passing the text and language to the engine,  
@@ -42,16 +45,17 @@ def textToAudio(request):
       
     # Saving the converted audio in a mp3 file , changing file name everytime
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
-    filename = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/audio"+date_string+".mp3"
+    filename = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/audio"+date_string+".mp3"
     myobj.save(filename) 
       
     # Playing the converted file
     p = vlc.MediaPlayer(filename)
     p.play()
-    print(request.POST)
-    return render(request, 'index.html')
+
+    return render(request, 'readtext.html')
 
 def texttoAudioNews(request):
+    print("-----------------------Processing news------------------------------------")
     language = 'en'
     opts=webdriver.ChromeOptions()
     opts.headless=True
@@ -83,17 +87,16 @@ def texttoAudioNews(request):
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
 
     # Saving the converted audio in mp3 format
-    filename1 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
-    filename2 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
+    filename1 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
+    filename2 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
     myobjHeading.save(filename1)
     myobjContent.save(filename2)
 
     # For calling out the Heading Tag and Content tag
-    headingMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading.mp3"
-    contentMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content.mp3"
+    headingMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading.mp3"
+    contentMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content.mp3"
 
     # Playing the converted file
-    #  -------------------------ERROR POINT ---------------------------- 
     # Playing the title " The Heading"
     p = vlc.MediaPlayer(headingMp3)
     p.play()

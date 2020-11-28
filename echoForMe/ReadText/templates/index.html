@@ -2,29 +2,23 @@
 
 {% block content %}
   <div class="s01">
-      <form action="/ReadText/textToAudio/" method="POST" style="margin-top: -100px">
+      <form style="margin-top: -100px">
         {% csrf_token %}
         <fieldset>
-          <legend style="margin: 0 auto;margin-bottom: 300px;margin-top: -350px;">EchoForMe</legend>
+          <legend style="padding-left: 450px;margin-bottom: 450px;margin-top: -300px;">EchoForMe</legend>
         </fieldset>
         <div class="inner-form" style="padding-top: 50px;border-top-style: solid;border-top-width: 0px;margin-top: -150px;">
-          <div class="input-field first-wrap">
-            <input id="text_to_read" type="text" name="text_to_read" placeholder="Enter the text to read" />
+          <div class="input-field third-wrap">
+            <button class="btn-search" type="submit" formaction="/ReadText/NormalText/" formmethod="GET">Read Text!</button>
           </div>
           <div class="input-field third-wrap">
-            <button class="btn-search" type="submit">Just Read!</button>
+            <button class="btn-search" type="submit" formaction="/ReadText/textToAudioNews/" formmethod="POST">Latest News!</button>
           </div>
         </div>
       </form>
     </div>
 
-  <div class="s01">
-    <form action="/ReadText/textToAudioNews/" method="GET">
-      <div class="inner-form" style="padding-top: 50px;border-top-style: solid;border-top-width: 0px; margin-top: -500px; align-items: center;">
-        <div class="input-field third-wrap" style="margin: 0 auto;">
-            <button class="btn-search" type="submit">Latest News!</button>
-        </div>
-      </div>
-    </form>
-  </div>
+  <!-- <div class="s01">
+   
+  </div> -->
 {% endblock %}
