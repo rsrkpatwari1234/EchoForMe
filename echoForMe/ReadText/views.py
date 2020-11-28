@@ -45,7 +45,7 @@ def textToAudioNormalText(request):
       
     # Saving the converted audio in a mp3 file , changing file name everytime
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
-    filename = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/audio"+date_string+".mp3"
+    filename = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/audio"+date_string+".mp3"
     myobj.save(filename) 
       
     # Playing the converted file
@@ -86,14 +86,14 @@ def texttoAudioNews(request):
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
 
     # Saving the converted audio in mp3 format
-    filename1 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
-    filename2 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
+    filename1 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
+    filename2 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
     myobjHeading.save(filename1)
     myobjContent.save(filename2)
 
     # For calling out the Heading Tag and Content tag
-    headingMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/heading.mp3"
-    contentMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content.mp3"
+    headingMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading.mp3"
+    contentMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content.mp3"
 
     # Playing the converted file
     # Playing the title " The Heading"
