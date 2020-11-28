@@ -20,7 +20,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Create your views here.
-# from catalog.models import Book, Author, BookInstance, Genre
 
 def index(request):
     """View function for home page of site."""
@@ -28,7 +27,11 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html')
 
-def textToAudio(request):
+def normaltext(request):
+    return render(request, 'readtext.html')
+
+def textToAudioNormalText(request):
+    print("---------------------------Processing text-----------------------------------")
     # Language in which you want to convert 
     language = 'en'
     # Passing the text and language to the engine,  
@@ -48,10 +51,11 @@ def textToAudio(request):
     # Playing the converted file
     p = vlc.MediaPlayer(filename)
     p.play()
-    print(request.POST)
-    return render(request, 'index.html')
+
+    return render(request, 'readtext.html')
 
 def texttoAudioNews(request):
+    print("-----------------------Processing news------------------------------------")
     language = 'en'
     opts=webdriver.ChromeOptions()
     opts.headless=True
@@ -65,17 +69,16 @@ def texttoAudioNews(request):
     # Finding the url for the latest news
     for a in soup.findAll('div',attrs={'class':'_3sL7K'}):
         url = a.find('a',href=True,attrs={'class':'_2tgB-'})
+        break;
 
-    headings=[] #List to store heading of the news
-    contents=[] #List to store content of the news
 
     # Using the find url for extracting news and heading 
     driver.get(url["href"])
     content = driver.page_source
     soup = BeautifulSoup(content,features="html.parser")
     for a in soup.findAll('div',attrs={'class':'_2GHni'}):
-        heading=a.find('h1')
         content=a.find('p',attrs={'class':'_159Jb'})
+        heading=a.find('h1')
 
     myobjHeading = gTTS(text=heading.text, lang=language, slow=False)
     myobjContent = gTTS(text=content.text, lang=language, slow=False)
@@ -93,7 +96,6 @@ def texttoAudioNews(request):
     contentMp3 = "/home/vidit/EchoForMe/echoForMe/ReadText/AudioFiles/content.mp3"
 
     # Playing the converted file
-    #  -------------------------ERROR POINT ---------------------------- 
     # Playing the title " The Heading"
     p = vlc.MediaPlayer(headingMp3)
     p.play()
