@@ -5,7 +5,8 @@ EchoForMe is a Web Application that reads out the latest news to the user.It is 
 ## Prerequisites :
 - [Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction)
 - [CockroachDB](https://www.cockroachlabs.com/docs/stable/build-a-python-app-with-cockroachdb-django.html)
-- Python
+- Web Scraping
+- Python programming language
 - Front end development tools
 
 ## Setting Up virtual Python3 environment
