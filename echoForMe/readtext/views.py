@@ -19,6 +19,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 # For time lag between Heading and Content
 import time
 
+from .models import *
+
 # Create your views here.
 
 def index(request):
@@ -40,12 +42,15 @@ def textToAudioNormalText(request):
     # have a high speed 
     alldata = request.POST
     text_to_read = alldata.get("text_to_read")
-    print(type(text_to_read))
+
+    # Saving the User Text in cockroachDB for future purposes
+    c = UserText(text = text_to_read)
+    c.save()
     myobj = gTTS(text=text_to_read, lang=language, slow=False) 
       
     # Saving the converted audio in a mp3 file , changing file name everytime
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
-    filename = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/audio"+date_string+".mp3"
+    filename = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/audio"+date_string+".mp3"
     myobj.save(filename) 
       
     # Playing the converted file
@@ -80,20 +85,24 @@ def texttoAudioNews(request):
         content=a.find('p',attrs={'class':'_159Jb'})
         heading=a.find('h1')
 
+    # Saving the Heading and Content of the news in cockroachDB for future purposes
+    c = News(newsHeading = heading.text,newsContent = content.text)
+    c.save()
+
     myobjHeading = gTTS(text=heading.text, lang=language, slow=False)
     myobjContent = gTTS(text=content.text, lang=language, slow=False)
 
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
 
     # Saving the converted audio in mp3 format
-    filename1 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading"+date_string+".mp3"
-    filename2 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content"+date_string+".mp3"
+    filename1 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/heading"+date_string+".mp3"
+    filename2 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/content"+date_string+".mp3"
     myobjHeading.save(filename1)
     myobjContent.save(filename2)
 
     # For calling out the Heading Tag and Content tag
-    headingMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/heading.mp3"
-    contentMp3 = "/home/radhika/Desktop/hack1/django_projects/echoForMe/ReadText/AudioFiles/content.mp3"
+    headingMp3 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/heading.mp3"
+    contentMp3 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/content.mp3"
 
     # Playing the converted file
     # Playing the title " The Heading"
@@ -118,5 +127,6 @@ def texttoAudioNews(request):
     # Playing The News Material
     p = vlc.MediaPlayer(filename2)
     p.play()
+
     
     return render(request, 'index.html')

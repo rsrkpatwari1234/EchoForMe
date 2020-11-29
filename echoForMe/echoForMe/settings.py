@@ -25,7 +25,7 @@ SECRET_KEY = '=wy01i*bne#=zt+k)b&mbulw2r0kx=)fv-h3@8_%!7@idez5nn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ReadText',
+    'readtext',
+    'echoForMe',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'echoForMe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE' : 'django_cockroachdb',
+        'NAME' : 'news',
+        'USER' : 'vidit',
+        'PASSWORD': 'connection',
+        'HOST' : 'localhost',
+        'PORT' : 39221,
     }
 }
 

@@ -25,7 +25,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ReadText/', include('ReadText.urls')),
+    path('ReadText/', include('readtext.urls')),
     path('', RedirectView.as_view(url='ReadText/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
