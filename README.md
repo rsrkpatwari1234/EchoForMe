@@ -1,6 +1,6 @@
 # EchoForMe
 
-EchoForMe is a Web Application that reads out the latest news to the user.It is designed especially for blind people to help them by reading out the daily news to them.It is a user-friendly application that can be used by people of all generations.It also supports the additional feature of converting any text to audio.
+EchoForMe is a Web Application that reads out the latest news to the user.It is designed especially for visually impaired people to help them by reading out the daily news to them.It is a user-friendly application that can be used by people of all generations.It also supports the additional feature of converting any text to audio.
 
 ## Prerequisites :
 - [Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction)
