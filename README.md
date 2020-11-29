@@ -33,12 +33,10 @@ $deactivate
 
 2.Initialise the directory for git and clone the repository
 
-3.You may require to perform the  migration steps
+3.Refer the [cockroachDB integration article](https://www.cockroachlabs.com/docs/stable/build-a-python-app-with-cockroachdb-django.html) to set up the database with the required tables.
+
+4.Activate your virtual python3 environment and start the Django server using the below command
 ```
-$python3 manage.py makemigrations
-$python3 manage.py migrate
+$python3 manage.py runserver 
 ```
-4.Start the Django server using the below command and follow the given URL
-```
-$python3 manage.py runserver 0.0.0.0:8000
-```
+5.Follow the URL dispalyed and you will be directed to the website
