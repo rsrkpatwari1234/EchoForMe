@@ -40,3 +40,5 @@ $deactivate
 $python3 manage.py runserver 
 ```
 5.Follow the URL dispalyed and you will be directed to the website
+
+# Demo of the application can be found at the youtube link : https://www.youtube.com/watch?v=3mhjo_kNuhM&feature=youtu.be 
