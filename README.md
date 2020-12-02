@@ -42,3 +42,13 @@ $python3 manage.py runserver
 5.Follow the URL dispalyed and you will be directed to the website
 
 Demo of the application can be found at the youtube link : https://www.youtube.com/watch?v=3mhjo_kNuhM&feature=youtu.be 
+
+## Future Scope
+1.Enabling keyboard response (clicking keys) feature instead of clicking buttons - Much more helpful for people who have just started learning working with computers.
+
+2.To save time in reading useless contents,we plan to add the text summarization module before creating audio files.This step will help us save both time and memory.
+
+3.We intend to make the software much more robust and utilise other pretrained models for tts to compare their performance and use the tool that displays best performance.
+
+4.EchoForMe can be further developed to add the recommendation feature where it can read out those news which match the interests of the user.
+
