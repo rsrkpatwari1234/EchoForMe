@@ -16,6 +16,9 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from webdriver_manager.chrome import ChromeDriverManager
 
+#
+from pathlib import Path
+
 # For time lag between Heading and Content
 import time
 
@@ -47,10 +50,13 @@ def textToAudioNormalText(request):
     c = UserText(text = text_to_read)
     c.save()
     myobj = gTTS(text=text_to_read, lang=language, slow=False) 
-      
+
     # Saving the converted audio in a mp3 file , changing file name everytime
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
-    filename = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/audio"+date_string+".mp3"
+
+    #Path of current working directory
+    currentDirectory = str(Path().absolute())
+    filename = currentDirectory+"/readtext/AudioFiles/audio"+date_string+".mp3"
     myobj.save(filename) 
       
     # Playing the converted file
@@ -94,15 +100,18 @@ def texttoAudioNews(request):
 
     date_string = datetime.now().strftime("%d%m%Y%H%M%S")
 
+    #Path of current working directory
+    currentDirectory = str(Path().absolute())
+
     # Saving the converted audio in mp3 format
-    filename1 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/heading"+date_string+".mp3"
-    filename2 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/content"+date_string+".mp3"
+    filename1 = currentDirectory+"/readtext/AudioFiles/heading"+date_string+".mp3"
+    filename2 = currentDirectory+"/readtext/AudioFiles/content"+date_string+".mp3"
     myobjHeading.save(filename1)
     myobjContent.save(filename2)
 
     # For calling out the Heading Tag and Content tag
-    headingMp3 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/heading.mp3"
-    contentMp3 = "/home/vidit/EchoForMe/echoForMe/readtext/AudioFiles/content.mp3"
+    headingMp3 = currentDirectory+"/readtext/AudioFiles/heading.mp3"
+    contentMp3 = currentDirectory+"/readtext/AudioFiles/content.mp3"
 
     # Playing the converted file
     # Playing the title " The Heading"

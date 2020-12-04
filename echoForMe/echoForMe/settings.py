@@ -84,7 +84,7 @@ DATABASES = {
         'USER' : 'vidit',
         'PASSWORD': 'connection',
         'HOST' : 'localhost',
-        'PORT' : 39221,
+        'PORT' : 37379,
     }
 }
 
