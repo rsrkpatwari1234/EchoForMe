@@ -53,6 +53,33 @@ Demo of the application can be found at the youtube link : https://www.youtube.c
 
 4.EchoForMe can be further developed to add the recommendation feature where it can read out those news which match the interests of the user.
 
+## Project Admins 🌟✨
+
+Wonderful admin of Project EchoForMe are : 
+<table>
+	<tr>
+    <td align="center">
+            <a href="https://github.com/rsrkpatwari1234">
+              <img src="https://avatars3.githubusercontent.com/u/45709641?v=4" width="100px" alt=""/><br />
+              <sub><b>rsrkpatwari1234</b></sub>
+            </a><br/>
+            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=rsrkpatwari1234">    
+                👑 💻 👀 💬 Author
+            </a>
+   </td>
+   <td align="center">
+            <a href="https://github.com/vidit624">
+              <img src="https://avatars0.githubusercontent.com/u/46816287?v=4" width="100px" alt=""/><br />
+              <sub><b>vidit624</b></sub>
+            </a><br/>
+            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=vidit624">
+                💻 🐛
+            </a>
+   </td>
+  </tr>
+</table>
+
+
 ## Contributors 🌟
 
 Thanks goes to these wonderful people ✨✨:
