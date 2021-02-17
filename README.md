@@ -1,6 +1,6 @@
 # EchoForMe
 ## Make learning clear and concise
-EchoForMe is a Web Application that reads out the latest news to the user.It is designed especially for visually impaired people to help them by reading out the daily news to them.It is a user-friendly application that can be used by people of all generations.It seeks to address challenges faced by physically challenged people or children while learning,people who focus more on verbal concepts of teaching and also for those who wish to learn the way of recitation and pronunciation of english language words.
+EchoForMe is a Web Application that reads out the latest news to the user. It is designed especially for visually impaired people to help them by reading out the daily news to them. It is a user-friendly application that can be used by people of all generations. It seeks to address challenges faced by physically challenged people or children while learning, people who focus more on verbal concepts of teaching and also for those who wish to learn the way of recitation and pronunciation of english language words.
 
 ## Prerequisites :
 - [Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction)
@@ -45,13 +45,13 @@ $python3 manage.py runserver
 Demo of the application can be found at the youtube link : https://www.youtube.com/watch?v=3mhjo_kNuhM&feature=youtu.be 
 
 ## Future Scope
-1.Enabling keyboard response (clicking keys) feature instead of clicking buttons - Much more helpful for people who have just started learning working with computers.
+1. Enabling keyboard response (clicking keys) feature instead of clicking buttons - Much more helpful for people who have just started learning working with computers.
 
-2.To save time in reading useless contents,we plan to add the text summarization module before creating audio files.This step will help us save both time and memory.
+2. To save time in reading useless contents,we plan to add the text summarization module before creating audio files.This step will help us save both time and memory.
 
-3.We intend to make the software much more robust and utilise other pretrained models for tts to compare their performance and use the tool that displays best performance.
+3. We intend to make the software much more robust and utilise other pretrained models for tts to compare their performance and use the tool that displays best performance.
 
-4.EchoForMe can be further developed to add the recommendation feature where it can read out those news which match the interests of the user.
+4. EchoForMe can be further developed to add the recommendation feature where it can read out those news which match the interests of the user.
 
 ## Project Admins 🌟✨
 
