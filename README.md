@@ -1,6 +1,6 @@
 # EchoForMe
 ## Make learning clear and concise
-EchoForMe is a Web Application that reads out the latest news to the user. It is designed especially for visually impaired people to help them by reading out the daily news to them. It is a user-friendly application that can be used by people of all generations. It seeks to address challenges faced by physically challenged people or children while learning, people who focus more on verbal concepts of teaching and also for those who wish to learn the way of recitation and pronunciation of english language words.
+EchoForMe is a web application that reads out the latest news to the user. It is designed especially for visually impaired people to help them by reading out daily news to them. It is a user-friendly application that can be used by people of all generations. It seeks to address challenges faced by physically challenged people or children while learning, people who focus more on verbal concepts of teaching and also for those who wish to learn the way of recitation and pronunciation of english language words.
 
 ## Prerequisites :
 - [Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction)
