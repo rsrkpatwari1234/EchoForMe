@@ -53,9 +53,8 @@ Demo of the application can be found at the youtube link : https://www.youtube.c
 
 4.EchoForMe can be further developed to add the recommendation feature where it can read out those news which match the interests of the user.
 
-## Project Admins 🌟✨
-
-Wonderful admin of Project EchoForMe are : 
+## Project Admins :
+ 
 <table>
 	<tr>
     <td align="center">
@@ -63,8 +62,7 @@ Wonderful admin of Project EchoForMe are :
               <img src="https://avatars3.githubusercontent.com/u/45709641?v=4" width="100px" alt=""/><br />
               <sub><b>rsrkpatwari1234</b></sub>
             </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=rsrkpatwari1234">    
-                👑 💻 👀 💬 Author
+            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=rsrkpatwari1234">   
             </a>
    </td>
    <td align="center">
@@ -73,81 +71,8 @@ Wonderful admin of Project EchoForMe are :
               <sub><b>vidit624</b></sub>
             </a><br/>
             <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=vidit624">
-                💻 🐛
             </a>
    </td>
-  </tr>
-</table>
-
-
-## Contributors 🌟
-
-Thanks goes to these wonderful people ✨✨:
-<table>
-	<tr>
-    <td align="center">
-            <a href="https://github.com/rsrkpatwari1234">
-              <img src="https://avatars3.githubusercontent.com/u/45709641?v=4" width="100px" alt=""/><br />
-              <sub><b>rsrkpatwari1234</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=rsrkpatwari1234">    
-                👑 💻 👀 💬 Author
-            </a>
-   </td>
-   <td align="center">
-            <a href="https://github.com/vidit624">
-              <img src="https://avatars0.githubusercontent.com/u/46816287?v=4" width="100px" alt=""/><br />
-              <sub><b>vidit624</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=vidit624">
-                💻 🐛
-            </a>
-   </td>
-   <td align="center">
-            <a href="https://github.com/tejan-singh">
-              <img src="https://avatars3.githubusercontent.com/u/50990883?v=4" width="100px" alt=""/><br />
-              <sub><b>tejan-singh</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=tejan-singh">
-                📖
-            </a>
-    </td>
-    <td align="center">
-            <a href="https://github.com/muthuannamalai12">
-              <img src="https://avatars.githubusercontent.com/u/64524822?v=4" width="100px" alt=""/><br />
-              <sub><b>muthuannamalai12</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=muthuannamalai12">
-                📖
-            </a>
-    </td>
-    <td align="center">
-            <a href="https://github.com/akrish4">
-              <img src="https://avatars.githubusercontent.com/u/61831021?v=4" width="100px" alt=""/><br />
-              <sub><b>akrish4</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=akrish4">
-                📖
-            </a>
-    </td>
-    <td align="center">
-            <a href="https://github.com/imakash3011">
-              <img src="https://avatars.githubusercontent.com/u/36455735?v=4" width="100px" alt=""/><br />
-              <sub><b>imakash3011</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=imakash3011">
-                📖
-            </a>
-    </td>
-    <td align="center">
-            <a href="https://github.com/samir-0711">
-              <img src="https://avatars.githubusercontent.com/u/68433936?v=4" width="100px" alt=""/><br />
-              <sub><b>samir-0711</b></sub>
-            </a><br/>
-            <a href="https://github.com/Jayshah6699/datascience-mashup/commits?author=samir-0711">
-                📖
-            </a>
-    </td>
   </tr>
 </table>
 
